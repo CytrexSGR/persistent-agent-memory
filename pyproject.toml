@@ -9,7 +9,10 @@ description = "MCP server for persistent agent memory across sessions"
 readme = "README.md"
 license = "AGPL-3.0-or-later"
 requires-python = ">=3.11"
-authors = [{ name = "CytrexSGR" }]
+authors = [
+    { name = "Andreas", email = "andreas@cytrex.dev" },
+    { name = "Cypher", email = "cypher@cytrex.dev" },
+]
 keywords = ["mcp", "memory", "agent", "claude", "llm"]
 classifiers = [
     "Development Status :: 3 - Alpha",
