@@ -10,8 +10,8 @@ readme = "README.md"
 license = "AGPL-3.0-or-later"
 requires-python = ">=3.11"
 authors = [
-    { name = "Andreas", email = "andreas@cytrex.dev" },
-    { name = "Cypher", email = "cypher@cytrex.dev" },
+    { name = "Andreas", email = "office@infinimind-creations.com" },
+    { name = "Cypher", email = "office@infinimind-creations.com" },
 ]
 keywords = ["mcp", "memory", "agent", "claude", "llm"]
 classifiers = [
