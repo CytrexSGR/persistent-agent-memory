@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_DB: agent_memory
+      POSTGRES_USER: memory
+      POSTGRES_PASSWORD: memory
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  memory:
+    build: .
+    depends_on:
+      - postgres
+    ports:
+      - "8765:8765"
+    environment:
+      STORAGE_BACKEND: postgres
+      DATABASE_URL: postgresql://memory:memory@postgres:5432/agent_memory
+      EMBEDDING_API_URL: http://host.docker.internal:11434/v1
+      EMBEDDING_MODEL: nomic-embed-text
+      EMBEDDING_DIMENSIONS: "768"
+
+volumes:
+  pgdata:
